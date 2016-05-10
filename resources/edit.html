@@ -20,7 +20,7 @@
       <input id="password" name="password" type="hidden" />
       <input id="session" name="session" type="hidden" value="%SESSION%" />
       <input id="signature" name="signature" type="hidden" />
-      <textarea id="note" name="note">%CONTENT%</textarea>
+      <textarea id="note" name="note"  onkeydown="if(event.keyCode===9){var v=this.value,s=this.selectionStart,e=this.selectionEnd;this.value=v.substring(0, s)+'\t'+v.substring(e);this.selectionStart=this.selectionEnd=s+1;return false;}">%CONTENT%</textarea>
       <fieldset id="input-elems">
         <input class="ui-elem" id="plain-password" name="plain-password" placeholder="Password for editing" type="text">&nbsp;
         <input class="button ui-elem" id="publish-button" name="button" type="submit" value="Publish">
